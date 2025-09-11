@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000; /* Fondo negro gamer */
+  color: #f4f4f4; /* Texto claro */
+  line-height: 1.6;
+}
+
+/* ===========================
+   ENCABEZADO
+=========================== */
+header {
+  background: linear-gradient(90deg, #1E90FF, #39FF14);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.5);
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+/* ===========================
+   NAVEGACIÓN (BOTONES HORIZONTALES)
+=========================== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #1E90FF;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px rgba(30, 144, 255, 0.6);
+}
+
+nav ul li a:hover {
+  background: #39FF14;
+  color: #000;
+  box-shadow: 0px 0px 15px rgba(57, 255, 20, 0.9);
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+=========================== */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+}
+
+section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1E90FF;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  border-left: 5px solid #39FF14;
+  padding-left: 10px;
+}
+
+section p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* ===========================
+   PIE DE PÁGINA
+=========================== */
+footer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: #111;
+  color: #39FF14;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  border-top: 2px solid #1E90FF;
+  box-shadow: 0 -3px 15px rgba(30, 144, 255, 0.5);
+}
