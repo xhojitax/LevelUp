@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login con validación de correo</title>
+  <link rel="stylesheet" href="login.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Level Up</h1>
+  <h2>Iniciar sesión</h2>
+
+  
+  <form id="loginForm">
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" required><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" required><br>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p id="mensaje"></p>
+
+  <script src="login.js"></script>
+</body>
+</html>
