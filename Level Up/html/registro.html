@@ -7,41 +7,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVBAR -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <h1 class="logo">Level Up</h1>
-    <ul>
-      <li><a href="../html/Index.html">Inicio</a></li>
-      <li><a href="catalogo.html">Catálogo</a></li>
-      <li><a href="../html/login.html">Login</a></li>
-      <li><a href="../html/registro.html">Registro</a></li>
-      <li><a href="../html/contacto.html">Contacto</a></li>
-    </ul>
-    
+     <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Productos.html">Catálogo</a></li>
+            <li><a href="Juegos.html">Juegos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registro.html">Registro</a></li>
+        </ul>
   </nav>
-  <div class="cuadro">
+
+  <!-- SECCIÓN PRINCIPAL -->
+  <div class="main-section">
     <h2>Registro de Usuario</h2>
     <form id="registerForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
 
-        <label for="correo">Correo:</label>
-        <input type="email" id="correo" required>
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" required>
 
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" required>
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" required>
 
-        <label for="confirmar">Confirmar Contraseña:</label>
-        <input type="password" id="confirmar" required>
+      <label for="confirmar">Confirmar Contraseña:</label>
+      <input type="password" id="confirmar" required>
 
-        <button type="submit">Registrar</button>
+      <button type="submit">Registrar</button>
     </form>
 
- 
-
-  <p id="mensaje"></p>
+    <p id="mensaje"></p>
+  </div>
 
   <script src="../js/registro.js"></script>
- </div>
 </body>
 </html>
