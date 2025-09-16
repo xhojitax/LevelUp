@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo de Productos - LevelUp</title>
+    <link rel="stylesheet" href="../css/Productos.css">
 </head>
 <body>
     <!-- Encabezado de la página -->
     <header>
-        <h1>Catalogo de Productos</h1>
+        <h1>Catálogo de Productos</h1>
         <nav>
             <ul>
                 <li><a href="Index.html">Inicio</a></li>
@@ -17,34 +18,200 @@
                 <li><a href="Contacto.html">Contacto</a></li>
                 <li><a href="Login.html">Login</a></li>
             </ul>
+        </nav>
     </header>
+
     <!-- Sección principal -->
     <main>
-        <section>
-            <h2>Productos</h2>
-            <p>Explora nuestro catálogo de productos para gamers.</p>
-            <ul>
-                <li>Teclados mecánicos</li>
-                <li>Ratones gaming</li>
-                <li>Auriculares con micrófono</li>
-                <li>Sillas ergonómicas</li>
-                <li>Monitores de alta frecuencia</li>
+        <!-- Filtros -->
+        <section class="filtros">
+            <h2>Filtrar por Categoría</h2>
+            <div class="botones-filtro">
+                <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+                <button class="btn-filtro" data-filtro="perifericos">Periféricos</button>
+                <button class="btn-filtro" data-filtro="accesorios">Accesorios</button>
+                <button class="btn-filtro" data-filtro="videojuegos">Videojuegos</button>
+            </div>
         </section>
-        <section>
-            <h2>Juegos</h2>
-            <p>Descubre los últimos lanzamientos y clásicos favoritos.</p>
-            <ul>
-                <li>Acción y Aventura</li>
-                <li>RPG (Juegos de rol)</li>
-                <li>FPS (Juegos de disparos en primera persona)</li>
-                <li>Estrategia en tiempo real</li>
-                <li>Simuladores</li>
-            </ul>
+
+        <!-- Sección Periféricos -->
+        <section class="seccion-productos" data-categoria="perifericos">
+            <h3>Periféricos Gaming</h3>
+            <div class="carrusel-container">
+                <button class="btn-carrusel btn-prev" data-carrusel="perifericos">‹</button>
+                <div class="carrusel" id="carrusel-perifericos">
+                    <div class="producto-card">
+                        <img src="../imagenes/teclado.jpg" alt="Teclado mecánico"width="200">
+                        <div class="producto-info">
+                            <h4>Teclado Mecánico</h4>
+                            <p>Descripción de teclados mecánicos</p>
+                            <div class="precio">$29.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-teclado">Cantidad:</label>
+                                <input type="number" id="cantidad-teclado" name="cantidad-teclado" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="producto-card">
+                        <img src="../imagenes/raton.png" alt="Mouse gaming"width="200">
+                        <div class="producto-info">
+                            <h4>Mouse Gaming</h4>
+                            <p>Descripción de Mouse gaming</p>
+                            <div class="precio">$19.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-raton">Cantidad:</label>
+                                <input type="number" id="cantidad-raton" name="cantidad-raton" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../imagenes/audifonos.jpg" alt="Auriculares con micrófono" width="200">
+                        <div class="producto-info">
+                            <h4>Auriculares con Micrófono</h4>
+                            <p>Descripción de Auriculares con micrófono</p>
+                            <div class="precio">$24.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-auriculares">Cantidad:</label>
+                                <input type="number" id="cantidad-auriculares" name="cantidad-auriculares" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../imagenes/camara.png" alt="Camara Web full HD 4K" width="200">
+                        <div class="producto-info">
+                            <h4>Camara Web full HD 4K</h4>
+                            <p>Descripción de Camara Web full HD 4K</p>
+                            <div class="precio">$24.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-camara">Cantidad:</label>
+                                <input type="number" id="cantidad-camara" name="cantidad-camara" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../imagenes/monitor-gamer-27.jpg" alt="Monitor Gamer 27" width="200">
+                        <div class="producto-info">
+                            <h4>Monitor Gamer 27"</h4>
+                            <p>Descripción de Monitores Gamers 27"</p>
+                            <div class="precio">$164.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-monitor">Cantidad:</label>
+                                <input type="number" id="cantidad-monitor" name="cantidad-monitor" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-carrusel btn-next" data-carrusel="perifericos">›</button>
+            </div>
+        </section>
+
+        <!-- Sección Accesorios -->
+        <section class="seccion-productos" data-categoria="accesorios">
+            <h3>Accesorios Gaming</h3>
+            <div class="carrusel-container">
+                <button class="btn-carrusel btn-prev" data-carrusel="accesorios">‹</button>
+                <div class="carrusel" id="carrusel-accesorios">
+                    <div class="producto-card">
+                        <img src="../imagenes/silla-ergonomica.jpg" alt="Silla Ergonómica" width="200">
+                        <div class="producto-info">
+                            <h4>Silla Ergonómica</h4>
+                            <p>Descripción de Sillas ergonómicas</p>
+                            <div class="precio">$99.990</div>
+                            <div class="disponibilidad">En stock: 12 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-silla">Cantidad:</label>
+                                <input type="number" id="cantidad-silla" name="cantidad-silla" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../imagenes/mousepad.jpg" alt="Mousepad XXL" width="200">
+                        <div class="producto-info">
+                            <h4>Mousepad XXL</h4>
+                            <p>Mousepad gaming extra grande con base antideslizante</p>
+                            <div class="precio">$15.990</div>
+                            <div class="disponibilidad">En stock: 25 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-mousepad">Cantidad:</label>
+                                <input type="number" id="cantidad-mousepad" name="cantidad-mousepad" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../imagenes/soporte-monitor.jpg" alt="Soporte Monitor" width="200">
+                        <div class="producto-info">
+                            <h4>Soporte para Monitor</h4>
+                            <p>Soporte ajustable para monitor con brazo articulado</p>
+                            <div class="precio">$35.990</div>
+                            <div class="disponibilidad">En stock: 8 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-soporte">Cantidad:</label>
+                                <input type="number" id="cantidad-soporte" name="cantidad-soporte" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-carrusel btn-next" data-carrusel="accesorios">›</button>
+            </div>
+        </section>
+
+        <!-- Sección Videojuegos -->
+        <section class="seccion-productos" data-categoria="videojuegos">
+            <h3>Videojuegos</h3>
+            <div class="juegos-grid">
+                <div class="juego-card">
+                    <img src="../imagenes/juego-aventura.jpg" alt="Acción y Aventura" width="200">
+                    <h4>Acción y Aventura</h4>
+                    <p>Juegos llenos de adrenalina y exploración</p>
+                </div>
+                <div class="juego-card">
+                    <img src="../imagenes/juego-rpg.jpg" alt="RPG (Juegos de rol)" width="200">
+                    <h4>RPG (Juegos de rol)</h4>
+                    <p>Sumérgete en mundos fantásticos y desarrolla tu personaje</p>
+                </div>
+                <div class="juego-card">
+                    <img src="../imagenes/juego-primera-persona.jpg" alt="FPS (Primera Persona)" width="200">
+                    <h4>FPS (Primera Persona)</h4>
+                    <p>Juegos de disparos en primera persona</p>
+                </div>
+                <div class="juego-card">
+                    <img src="../imagenes/juego-deporte.jpg" alt="Deportes" width="200">
+                    <h4>Deportes</h4>
+                    <p>Compite en emocionantes eventos deportivos</p>
+                </div>
+                <div class="juego-card">
+                    <img src="../imagenes/juego-simulador.jpg" alt="Simuladores" width="200">
+                    <h4>Simuladores</h4>
+                    <p>Experiencias realistas de conducción, vuelo y más</p>
+                </div>
+            </div>
         </section>
     </main>
+
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Level Up. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="../js/Productos.js"></script>
 </body>
 </html>

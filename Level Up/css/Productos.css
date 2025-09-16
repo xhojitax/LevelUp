@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000;
+    color: #0ff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    padding: 1rem 0;
+    box-shadow: 0 0 10px #00f;
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #0ff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: #222;
+    border: 1px solid #00f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    background-color: #00f;
+    color: #000;
+    box-shadow: 0 0 10px #00f;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Filtros */
+.filtros {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid #00f;
+    box-shadow: 0 0 10px #00f;
+}
+
+.filtros h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0ff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.botones-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    padding: 0.8rem 1.5rem;
+    background-color: #00f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-filtro:hover {
+    background-color: #009;
+    color: #0ff;
+}
+
+.btn-filtro.activo {
+    background-color: #0ff;
+    color: #000;
+}
+
+/* Secciones de productos */
+.seccion-productos {
+    margin-bottom: 4rem;
+}
+
+.seccion-productos h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #00f;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+/* Carrusel */
+.carrusel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #111;
+    padding: 2rem;
+    border: 1px solid #00f;
+    box-shadow: 0 0 10px #00f;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+    align-items: stretch;
+}
+
+.producto-card {
+    min-width: 300px;
+    flex-shrink: 0;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #00f;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00f;
+    border-color: #0ff;
+}
+
+.producto-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 2px solid #00f;
+}
+
+.producto-card:hover img {
+    border-color: #0ff;
+}
+
+.producto-info h4 {
+    color: #0ff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.producto-info p {
+    margin-bottom: 0.8rem;
+    color: #0ff;
+}
+
+.precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00f;
+    margin-bottom: 0.5rem;
+}
+
+.disponibilidad {
+    color: #0ff;
+    margin-bottom: 1rem;
+}
+
+.controles-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.controles-producto label {
+    font-size: 0.9rem;
+    color: #0ff;
+}
+
+.controles-producto input {
+    width: 60px;
+    padding: 0.5rem;
+    border: 1px solid #00f;
+    border-radius: 5px;
+    background-color: #222;
+    color: #0ff;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.controles-producto input:focus {
+    outline: none;
+    border-color: #0ff;
+    box-shadow: 0 0 5px #0ff;
+}
+
+.btn-agregar {
+    padding: 0.8rem 1.5rem;
+    background-color: #00f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-agregar:hover {
+    background-color: #009;
+    color: #0ff;
+}
+
+/* Botones de navegación del carrusel */
+.btn-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00f;
+    color: #000;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+.btn-carrusel:hover {
+    background-color: #009;
+    color: #0ff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btn-prev {
+    left: 10px;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+/* Categoría Juegos */
+.juegos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.juego-card {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #00f;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00f;
+}
+
+.juego-card:hover {
+    transform: translateY(-5px);
+    border-color: #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.juego-card h4 {
+    color: #0ff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.juego-card p {
+    color: #0ff;
+}
+
+.juego-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 2px solid #00f;
+}
+
+.juego-card:hover img {
+    border-color: #0ff;
+}
+
+/* Ocultar secciones */
+.seccion-productos.oculta {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 2px solid #00f;
+    color: #0ff;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .carrusel {
+        flex-direction: column;
+    }
+    
+    .producto-card {
+        min-width: auto;
+    }
+    
+    .btn-carrusel {
+        display: none;
+    }
+    
+    .botones-filtro {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controles-producto {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
