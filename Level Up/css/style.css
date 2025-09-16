@@ -10,12 +10,11 @@ body {
   background: url("https://i.pinimg.com/1200x/e6/7e/0f/e67e0fd04058c74ae8baf078c67adcfe.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+
+  /* 💡 Quitamos flex del body y añadimos margen interno */
+  display: block;
   min-height: 100vh;
-  padding: 0;
+  padding: 10px; /* margen interno general */
 }
 
 /* ====== Navbar ====== */
@@ -78,6 +77,13 @@ body {
 
 .carousel-indicators [data-bs-target] {
   background-color: #00f7ff;
+}
+
+/* 💡 margen lateral para carrusel en pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel {
+    padding: 0 10px;
+  }
 }
 
 /* ====== Sección principal ====== */
