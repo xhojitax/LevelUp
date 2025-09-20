@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Level Up</title>
+
+  <!-- Fuente Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS (si usas Bootstrap) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .carrito-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: rgba(0,0,0,0.85);
+      border-radius: 15px;
+      box-shadow: 0 0 30px #00f;
+    }
+
+    .carrito-container h1 {
+      color: #00f7ff;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00f;
+    }
+
+    .carrito-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0,0,0,0.6);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00f;
+    }
+
+    .item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 15px;
+    }
+
+    .item-info {
+      flex: 1;
+      color: #ddd;
+    }
+
+    .item-info h3 {
+      margin-bottom: 5px;
+      color: #00f7ff;
+    }
+
+    .item-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .item-actions input {
+      width: 50px;
+      text-align: center;
+      background-color: #222;
+      color: #0ff;
+      border: 1px solid #00f;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    .item-actions button {
+      background-color: #00f;
+      color: #000;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .item-actions button:hover {
+      background-color: #009;
+      color: #fff;
+    }
+
+    .total {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 1.3em;
+      color: #0ff;
+    }
+
+    .btn-finalizar {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      background-color: #00f;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-finalizar:hover {
+      background-color: #009;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo">Level Up</div>
+    <ul>
+      <li><a href="Index.html">Inicio</a></li>
+      <li><a href="Productos.html">Catálogo</a></li>
+      <li><a href="Juegos.html">Juegos</a></li>
+      <li><a href="Contacto.html">Contacto</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="registro.html">Registro</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+    </ul>
+  </nav>
+
+  <div class="carrito-container">
+    <h1>Carrito de Compras</h1>
+    <div class="carrito-items" id="carritoItems">
+      <!-- Los productos se generan desde JS -->
+    </div>
+    <div class="total">
+      Total: $<span id="total">0</span>
+    </div>
+    <button class="btn-finalizar" id="finalizarCompra">Finalizar Compra</button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tu JS -->
+  <script src="../js/carrito.js"></script>
+</body>
+</html>
