@@ -91,11 +91,12 @@ body {
 
 /* Tarjetas de noticias */
 .blog-card {
-  background: rgba(0, 0, 0, 0.85);
-  border: 2px solid #1e90ff;
+  background: #000;              /* negro sólido */
+  border: 2px solid #1e90ff;     /* azul borde */
   border-radius: 12px;
   padding: 20px;
-  color: #fff;
+  color: #00f7ff;                /* texto azul neón */
+  font-family: 'Orbitron', sans-serif;
 }
 
 .blog-card h3 {
@@ -159,4 +160,14 @@ body {
   border-top: 1px solid #00f;
   padding: 15px;
   line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .blog-section, #accordionNoticias {
+    width: 95%;
+  }
 }
