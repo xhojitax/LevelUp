@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Productos - LevelUp</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Productos.css">
 </head>
 <body>
     <!-- Encabezado de la página -->
@@ -114,9 +114,56 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="producto-card">
+                        <img src="../images/teclado-hyperx.jpg" alt="Teclado Mecánico RGB HyperX" width="200">
+                        <div class="producto-info">
+                            <h4>Teclado Mecánico RGB HyperX Alloy FPS Pro</h4>
+                            <p>Teclado compacto con switches mecánicos y retroiluminación RGB personalizable.</p>
+                            <div class="precio">$69.990</div>
+                            <div class="disponibilidad">En stock: 15 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-hyperx">Cantidad:</label>
+                                <input type="number" id="cantidad-hyperx" name="cantidad-hyperx" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../images/mouse-g502.jpg" alt="Mouse Logitech G502 HERO" width="200">
+                        <div class="producto-info">
+                            <h4>Mouse Logitech G502 HERO</h4>
+                            <p>Sensor HERO 25K para máxima precisión, ideal para shooters y MOBAs.</p>
+                            <div class="precio">$49.990</div>
+                            <div class="disponibilidad">En stock: 20 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-g502">Cantidad:</label>
+                                <input type="number" id="cantidad-g502" name="cantidad-g502" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../images/audifonos-arctis7.jpg" alt="Audífonos SteelSeries Arctis 7" width="200">
+                        <div class="producto-info">
+                            <h4>Audífonos SteelSeries Arctis 7</h4>
+                            <p>Inalámbricos con sonido envolvente y micrófono retráctil.</p>
+                            <div class="precio">$99.990</div>
+                            <div class="disponibilidad">En stock: 10 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-arctis7">Cantidad:</label>
+                                <input type="number" id="cantidad-arctis7" name="cantidad-arctis7" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <button class="btn-carrusel btn-next" data-carrusel="perifericos">›</button>
             </div>
+
         </section>
 
         <!-- Sección Accesorios -->
@@ -156,6 +203,52 @@
                     </div>
 
                     <div class="producto-card">
+                        <img src="../images/silla-razer.jpg" alt="Silla Gamer Razer Iskur" width="200">
+                        <div class="producto-info">
+                            <h4>Silla Gamer Razer Iskur</h4>
+                            <p>Con soporte lumbar ergonómico y acabados premium.</p>
+                            <div class="precio">$349.990</div>
+                            <div class="disponibilidad">En stock: 5 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-razer">Cantidad:</label>
+                                <input type="number" id="cantidad-razer" name="cantidad-razer" min="1" max="5" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../images/base-ps5.jpg" alt="Base de Carga DualSense PS5" width="200">
+                        <div class="producto-info">
+                            <h4>Base de Carga DualSense PS5</h4>
+                            <p>Permite cargar dos controles de PlayStation 5 al mismo tiempo.</p>
+                            <div class="precio">$39.990</div>
+                            <div class="disponibilidad">En stock: 18 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-ps5">Cantidad:</label>
+                                <input type="number" id="cantidad-ps5" name="cantidad-ps5" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="../images/led-rgb.jpg" alt="Kit de Luces LED RGB" width="200">
+                        <div class="producto-info">
+                            <h4>Kit de Luces LED RGB para Setup</h4>
+                            <p>Tira de luces con control remoto para ambientar el escritorio.</p>
+                            <div class="precio">$24.990</div>
+                            <div class="disponibilidad">En stock: 30 unidades</div>
+                            <div class="controles-producto">
+                                <label for="cantidad-rgb">Cantidad:</label>
+                                <input type="number" id="cantidad-rgb" name="cantidad-rgb" min="1" max="10" value="1">
+                                <button type="button" class="btn-agregar">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="producto-card">
                         <img src="../images/soporte-monitor.jpg" alt="Soporte Monitor" width="200">
                         <div class="producto-info">
                             <h4>Soporte para Monitor</h4>
@@ -175,36 +268,56 @@
         </section>
 
         <!-- Sección Videojuegos -->
-        <section class="seccion-productos" data-categoria="videojuegos">
-            <h3>Videojuegos</h3>
-            <div class="juegos-grid">
-                <div class="juego-card">
-                    <img src="../images/juego aventura.jpg" alt="Acción y Aventura" width="200">
-                    <h4>Acción y Aventura</h4>
-                    <p>Juegos llenos de adrenalina y exploración</p>
+                <section class="videojuegos">
+                    <h2>🎮 Video Juegos</h2>
+
+            <!-- Grid catálogo -->
+                    <div class="videojuegos-grid">
+                    <div class="videojuego-card">
+                        <img src="../images/godofwar.jpg" alt="God of War Ragnarok">
+                        <h3>God of War: Ragnarok</h3>
+                        <p>$59.990</p>
+                    </div>
+
+                    <div class="videojuego-card">
+                        <img src="../img/videogames/spiderman.jpg" alt="Spider-Man 2">
+                        <h3>Spider-Man 2</h3>
+                        <p>$64.990</p>
+                    </div>
+
+                    <div class="videojuego-card">
+                        <img src="../img/videogames/zelda.jpg" alt="Zelda: Tears of the Kingdom">
+                        <h3>Zelda: Tears of the Kingdom</h3>
+                        <p>$69.990</p>
+                    </div>
+
+                    <div class="videojuego-card">
+                        <img src="../img/videogames/blackmyth.jpg" alt="Black Myth Wukong">
+                        <h3>Black Myth: Wukong</h3>
+                        <p>$59.990</p>
+                    </div>
+
+                    <div class="videojuego-card">
+                        <img src="../img/videogames/mk1.jpg" alt="Mortal Kombat 1">
+                        <h3>Mortal Kombat 1</h3>
+                        <p>$54.990</p>
+                    </div>
                 </div>
-                <div class="juego-card">
-                    <img src="../images/juego rpg.jpg" alt="RPG (Juegos de rol)" width="200">
-                    <h4>RPG (Juegos de rol)</h4>
-                    <p>Sumérgete en mundos fantásticos y desarrolla tu personaje</p>
-                </div>
-                <div class="juego-card">
-                    <img src="../images/juego primera persona.jpg" alt="FPS (Primera Persona)" width="200">
-                    <h4>FPS (Primera Persona)</h4>
-                    <p>Juegos de disparos en primera persona</p>
-                </div>
-                <div class="juego-card">
-                    <img src="../images/juego deporte.jpg" alt="Deportes" width="200">
-                    <h4>Deportes</h4>
-                    <p>Compite en emocionantes eventos deportivos</p>
-                </div>
-                <div class="juego-card">
-                    <img src="../images/juego simulador.jpg" alt="Simuladores" width="200">
-                    <h4>Simuladores</h4>
-                    <p>Experiencias realistas de conducción, vuelo y más</p>
-                </div>
-            </div>
-        </section>
+
+                <!-- Ranking -->
+                    <div class="videojuegos-ranking">
+                        <h3>🔥 Top Ventas</h3>
+                        <ol>
+                            <li><span class="rank-number">#1</span> God of War: Ragnarok</li>
+                            <li><span class="rank-number">#2</span> Spider-Man 2</li>
+                            <li><span class="rank-number">#3</span> Zelda: Tears of the Kingdom</li>
+                            <li><span class="rank-number">#4</span> Mortal Kombat 1</li>
+                        </ol>
+                    </div>
+            </section>
+
+
+        
     </main>
 
     <!-- Pie de página -->
@@ -212,6 +325,6 @@
         <p>&copy; 2024 Level Up. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="../js/"></script>
+    <script src="../js/Productos.js"></script>
 </body>
 </html>

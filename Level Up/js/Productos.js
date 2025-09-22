@@ -82,7 +82,7 @@ function moverCarrusel(nombreCarrusel, direccion) {
     if (!carrusel) return;
     
     const config = carruseles[nombreCarrusel];
-    const anchoProducto = 320; // 300px + 20px de gap
+    const anchoProducto = carrusel.querySelector('.producto-card').offsetWidth + 20;
     
     // Calcular nuevo índice
     config.indice += direccion;
