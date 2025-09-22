@@ -7,8 +7,8 @@
 
 /* Fondo general con imagen */
 body {
-  background: url("https://i.pinimg.com/1200x/e6/7e/0f/e67e0fd04058c74ae8baf078c67adcfe.jpg") no-repeat center center fixed; /* tu imagen de fondo */
-  background-size: cover; /* que cubra toda la pantalla */
+  background: url("https://i.pinimg.com/1200x/e6/7e/0f/e67e0fd04058c74ae8baf078c67adcfe.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: #00f;  
   display: flex;
   justify-content: center;
@@ -16,7 +16,6 @@ body {
   flex-direction: column;
   padding: 0;
 }
-
 
 /* Navbar fija y centrada */
 .navbar {
@@ -26,11 +25,11 @@ body {
   width: 100%;
   background-color: rgba(0,0,0,0.9);
   display: flex;
-  justify-content: space-between; /* mantiene logo a la izquierda */
+  justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   z-index: 1000;
-  box-shadow: 0 0 15px #00f; /* efecto neón */
+  box-shadow: 0 0 15px #00f;
 }
 
 .navbar .logo {
@@ -43,10 +42,10 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 50px;         /* separación entre enlaces */
-  margin: 0 auto;    /* centra horizontalmente */
+  gap: 50px;
+  margin: 0 auto;
   padding: 0;
-  flex-grow: 1;      /* hace que los enlaces se expandan al centro */
+  flex-grow: 1;
   justify-content: center;
 }
 
@@ -65,37 +64,47 @@ body {
 
 /* Sección del blog con fondo negro 80% */
 .blog-section {
-  min-height: 100vh; /* ocupa al menos toda la altura de pantalla */
+  min-height: 100vh;
   width: 70%;
-  background-color: rgba(0,0,0,0.8); /* negro con opacidad */
+  background-color: rgba(0,0,0,0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px 20px 40px; /* espacio para que no choque con el navbar */
+  padding: 120px 20px 40px;
 }
 
 .blog-section h1 {
   color: #00f7ff;
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.blog-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Contenedor de noticias */
 .blog-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
-  width: 80%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 /* Tarjetas de noticias */
 .blog-card {
-  background: #000;              /* negro sólido */
-  border: 2px solid #1e90ff;     /* azul borde */
+  background: #000;
+  border: 2px solid #1e90ff;
   border-radius: 12px;
   padding: 20px;
-  color: #00f7ff;                /* texto azul neón */
+  color: #00f7ff;
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -115,17 +124,29 @@ body {
   text-decoration: underline;
 }
 
-#accordionNoticias {
-  width: 60%;
-  margin: 0 auto;
+/* Estilo unificado para acordeones */
+#accordionNoticias, 
+#accordionReseñas {
+  width: 70%;
+  margin: 20px auto;
   background-color: rgba(0, 0, 0, 0.85);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 0 20px #00f;
+  box-sizing: border-box;
 }
 
+/* Items del acordeón */
+.accordion-item {
+  background-color: transparent !important;
+  border: 1px solid #00f;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Botón del acordeón */
 .accordion-button {
-  background-color: #111 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
   color: #00f7ff !important;
   font-weight: bold;
   border: none;
@@ -140,9 +161,9 @@ body {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #00f !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
   color: #fff !important;
-  text-shadow: 0 0 8px #000;
+  text-shadow: 0 0 8px #00f;
 }
 
 .accordion-button:focus {
@@ -154,20 +175,34 @@ body {
   filter: brightness(0) invert(1);
 }
 
+/* Cuerpo del acordeón */
 .accordion-body {
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.9) !important;
   color: #ddd;
-  border-top: 1px solid #00f;
   padding: 15px;
   line-height: 1.5;
+  border-top: none !important; /* eliminado borde extra */
 }
 
+/* Imágenes dentro del acordeón */
+.accordion-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .navbar ul {
     flex-direction: column;
     gap: 10px;
   }
-  .blog-section, #accordionNoticias {
+  .blog-section, 
+  #accordionNoticias, 
+  #accordionReseñas {
     width: 95%;
   }
 }
