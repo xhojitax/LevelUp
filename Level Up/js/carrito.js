@@ -1,11 +1,8 @@
-// Simulación de productos en el carrito
-const productos = [
-  { id: 1, nombre: 'Juego RPG', precio: 29990, cantidad: 1, img: 'https://via.placeholder.com/80' },
-  { id: 2, nombre: 'Juego Acción', precio: 19990, cantidad: 2, img: 'https://via.placeholder.com/80' },
-];
-
 const carritoItems = document.getElementById('carritoItems');
 const totalSpan = document.getElementById('total');
+
+// leer carrito desde localStorage
+let productos = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Renderiza el carrito
 function renderCarrito() {
@@ -13,16 +10,16 @@ function renderCarrito() {
   let total = 0;
 
   productos.forEach((prod, index) => {
-    total += prod.precio * prod.cantidad;
+    total += prod.price * prod.cantidad;
 
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('item');
 
     itemDiv.innerHTML = `
-      <img src="${prod.img}" alt="${prod.nombre}">
+      <img src="${prod.img}" alt="${prod.name}">
       <div class="item-info">
-        <h3>${prod.nombre}</h3>
-        <p>Precio: $${prod.precio.toLocaleString()}</p>
+        <h3>${prod.name}</h3>
+        <p>Precio: $${prod.price.toLocaleString()}</p>
       </div>
       <div class="item-actions">
         <input type="number" min="1" value="${prod.cantidad}" data-index="${index}" class="cantidad">
@@ -33,6 +30,8 @@ function renderCarrito() {
   });
 
   totalSpan.textContent = total.toLocaleString();
+  // guardar cambios en localStorage
+  localStorage.setItem('cart', JSON.stringify(productos));
 }
 
 // Cambiar cantidad
@@ -59,7 +58,8 @@ document.getElementById('finalizarCompra').addEventListener('click', () => {
     alert('Tu carrito está vacío');
   } else {
     alert('¡Gracias por tu compra!');
-    productos.length = 0;
+    productos = [];
+    localStorage.removeItem('cart');
     renderCarrito();
   }
 });
