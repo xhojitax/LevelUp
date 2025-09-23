@@ -19,7 +19,7 @@ body {
 
 /* ====== Navbar ====== */
 .navbar {
-  position: relative; /* debajo del carrusel */
+  position: absolute; /* debajo del carrusel */
   width: 100%;
   background-color: rgba(0,0,0,0.9);
   display: flex;
@@ -150,8 +150,8 @@ form {
 
 /* Inputs */
 input {
-  background-color: #222;  /* gris oscuro */
-  color: #0ff;             /* texto celeste */
+  background-color: #222; /* gris oscuro */
+  color: #0ff; /* texto celeste */
   border: none;
   border-radius: 6px;
   padding: 12px;
@@ -177,7 +177,7 @@ button {
 }
 
 button:hover {
-  background-color: #009;  /* azul más oscuro al pasar mouse */
+  background-color: #009; /* azul más oscuro al pasar mouse */
   box-shadow: 0 0 10px #00f;
 }
 
@@ -213,12 +213,12 @@ h2 {
 
   .main-section h1 {
     font-size: 2em;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
   }
 
   .main-section h2 {
     font-size: 1.5em;
-    margin-bottom: 12px; 
+    margin-bottom: 12px;
   }
 
   .main-section p {
@@ -249,16 +249,144 @@ h2 {
     margin-bottom: 15px;
   }
   img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-body {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  body {
     padding-bottom: 10px;
   }
-  
+
   /* Si tienes un contenedor principal */
   .container, .wrapper {
     padding-bottom: 15px;
   }
+}
+/* ====== Estilos para la página de Productos ====== */
+.pagina-productos .productos-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: rgba(0,0,0,0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 30px #00f;
+}
+
+.pagina-productos .productos-container h1 {
+  color: #00f7ff;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00f;
+}
+
+.pagina-productos .filtros-container {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00f;
+  text-align: center;
+}
+
+.pagina-productos .filtros-container h2 {
+  color: #00f7ff;
+  margin-bottom: 10px;
+}
+
+.pagina-productos .filtros-container .filtros {
+  display: flex;
+  flex-direction: column; /* Cambiado: Hace que los elementos se apilen en vertical */
+  gap: 10px;
+  align-items: stretch;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagina-productos .filtro-btn {
+  background-color: #00f;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.pagina-productos .filtro-btn:hover {
+  background-color: #009;
+  color: #fff;
+  box-shadow: 0 0 5px #00f;
+}
+
+.pagina-productos .productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.pagina-productos .producto-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00f;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.pagina-productos .producto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00f;
+}
+
+.pagina-productos .producto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.pagina-productos .producto-info h3 {
+  margin-bottom: 5px;
+  color: #00f7ff;
+}
+
+.pagina-productos .producto-info p {
+  font-size: 0.9em;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.pagina-productos .producto-card span {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.pagina-productos .producto-actions {
+  margin-top: 20px;
+}
+
+.pagina-productos .producto-actions button {
+  background-color: #00f;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.pagina-productos .producto-actions button:hover {
+  background-color: #009;
+  color: #fff;
 }

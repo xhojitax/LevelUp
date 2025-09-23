@@ -1,330 +1,245 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Productos - LevelUp</title>
-    <link rel="stylesheet" href="../css/Productos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Level Up</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <!-- Encabezado de la página -->
-    <header>
-        <h1>Catálogo de Productos</h1>
-        <nav>
-            <ul>
-                <li><a href="Index.html">Inicio</a></li>
-                <li><a href="Productos.html">Catálogo</a></li>
-                <li><a href="Juegos.html">Juegos</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-                <li><a href="Login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="pagina-productos">
 
-    <!-- Sección principal -->
-    <main>
-        <!-- Filtros -->
-        <section class="filtros">
-            <h2>Filtrar por Categoría</h2>
-            <div class="botones-filtro">
-                <button class="btn-filtro activo" data-filtro="todos">Todos</button>
-                <button class="btn-filtro" data-filtro="perifericos">Periféricos</button>
-                <button class="btn-filtro" data-filtro="accesorios">Accesorios</button>
-                <button class="btn-filtro" data-filtro="videojuegos">Videojuegos</button>
-            </div>
-        </section>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../images/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
 
-        <!-- Sección Periféricos -->
-        <section class="seccion-productos" data-categoria="perifericos">
-            <h3>Periféricos Gaming</h3>
-            <div class="carrusel-container">
-                <button class="btn-carrusel btn-prev" data-carrusel="perifericos">‹</button>
-                <div class="carrusel" id="carrusel-perifericos">
-                    <div class="producto-card">
-                        <img src="../images/teclado.jpg" alt="Teclado mecánico"width="200">
-                        <div class="producto-info">
-                            <h4>Teclado Mecánico</h4>
-                            <p>Descripción de teclados mecánicos</p>
-                            <div class="precio">$29.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-teclado">Cantidad:</label>
-                                <input type="number" id="cantidad-teclado" name="cantidad-teclado" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="producto-card">
-                        <img src="../images/raton.png" alt="Mouse gaming"width="200">
-                        <div class="producto-info">
-                            <h4>Mouse Gaming</h4>
-                            <p>Descripción de Mouse gaming</p>
-                            <div class="precio">$19.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-raton">Cantidad:</label>
-                                <input type="number" id="cantidad-raton" name="cantidad-raton" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Level Up</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Productos.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Carrito.html">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-                    <div class="producto-card">
-                        <img src="../images/audifonos.jpg" alt="Auriculares con micrófono" width="200">
-                        <div class="producto-info">
-                            <h4>Auriculares con Micrófono</h4>
-                            <p>Descripción de Auriculares con micrófono</p>
-                            <div class="precio">$24.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-auriculares">Cantidad:</label>
-                                <input type="number" id="cantidad-auriculares" name="cantidad-auriculares" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/camara.png" alt="Camara Web full HD 4K" width="200">
-                        <div class="producto-info">
-                            <h4>Camara Web full HD 4K</h4>
-                            <p>Descripción de Camara Web full HD 4K</p>
-                            <div class="precio">$24.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-camara">Cantidad:</label>
-                                <input type="number" id="cantidad-camara" name="cantidad-camara" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/monitor gamer 27.jpg" alt="Monitor Gamer 27" width="200">
-                        <div class="producto-info">
-                            <h4>Monitor Gamer 27"</h4>
-                            <p>Descripción de Monitores Gamers 27"</p>
-                            <div class="precio">$164.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-monitor">Cantidad:</label>
-                                <input type="number" id="cantidad-monitor" name="cantidad-monitor" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/teclado-hyperx.jpg" alt="Teclado Mecánico RGB HyperX" width="200">
-                        <div class="producto-info">
-                            <h4>Teclado Mecánico RGB HyperX Alloy FPS Pro</h4>
-                            <p>Teclado compacto con switches mecánicos y retroiluminación RGB personalizable.</p>
-                            <div class="precio">$69.990</div>
-                            <div class="disponibilidad">En stock: 15 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-hyperx">Cantidad:</label>
-                                <input type="number" id="cantidad-hyperx" name="cantidad-hyperx" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/mouse-g502.jpg" alt="Mouse Logitech G502 HERO" width="200">
-                        <div class="producto-info">
-                            <h4>Mouse Logitech G502 HERO</h4>
-                            <p>Sensor HERO 25K para máxima precisión, ideal para shooters y MOBAs.</p>
-                            <div class="precio">$49.990</div>
-                            <div class="disponibilidad">En stock: 20 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-g502">Cantidad:</label>
-                                <input type="number" id="cantidad-g502" name="cantidad-g502" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/audifonos-arctis7.jpg" alt="Audífonos SteelSeries Arctis 7" width="200">
-                        <div class="producto-info">
-                            <h4>Audífonos SteelSeries Arctis 7</h4>
-                            <p>Inalámbricos con sonido envolvente y micrófono retráctil.</p>
-                            <div class="precio">$99.990</div>
-                            <div class="disponibilidad">En stock: 10 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-arctis7">Cantidad:</label>
-                                <input type="number" id="cantidad-arctis7" name="cantidad-arctis7" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <button class="btn-carrusel btn-next" data-carrusel="perifericos">›</button>
-            </div>
-
-        </section>
-
-        <!-- Sección Accesorios -->
-        <section class="seccion-productos" data-categoria="accesorios">
-            <h3>Accesorios Gaming</h3>
-            <div class="carrusel-container">
-                <button class="btn-carrusel btn-prev" data-carrusel="accesorios">‹</button>
-                <div class="carrusel" id="carrusel-accesorios">
-                    <div class="producto-card">
-                        <img src="../images/silla ergonomica.jpg" alt="Silla Ergonómica" width="200">
-                        <div class="producto-info">
-                            <h4>Silla Ergonómica</h4>
-                            <p>Descripción de Sillas ergonómicas</p>
-                            <div class="precio">$99.990</div>
-                            <div class="disponibilidad">En stock: 12 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-silla">Cantidad:</label>
-                                <input type="number" id="cantidad-silla" name="cantidad-silla" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/mousepad.jpg" alt="Mousepad XXL" width="200">
-                        <div class="producto-info">
-                            <h4>Mousepad XXL</h4>
-                            <p>Mousepad gaming extra grande con base antideslizante</p>
-                            <div class="precio">$15.990</div>
-                            <div class="disponibilidad">En stock: 25 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-mousepad">Cantidad:</label>
-                                <input type="number" id="cantidad-mousepad" name="cantidad-mousepad" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/silla-razer.jpg" alt="Silla Gamer Razer Iskur" width="200">
-                        <div class="producto-info">
-                            <h4>Silla Gamer Razer Iskur</h4>
-                            <p>Con soporte lumbar ergonómico y acabados premium.</p>
-                            <div class="precio">$349.990</div>
-                            <div class="disponibilidad">En stock: 5 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-razer">Cantidad:</label>
-                                <input type="number" id="cantidad-razer" name="cantidad-razer" min="1" max="5" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/base-ps5.jpg" alt="Base de Carga DualSense PS5" width="200">
-                        <div class="producto-info">
-                            <h4>Base de Carga DualSense PS5</h4>
-                            <p>Permite cargar dos controles de PlayStation 5 al mismo tiempo.</p>
-                            <div class="precio">$39.990</div>
-                            <div class="disponibilidad">En stock: 18 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-ps5">Cantidad:</label>
-                                <input type="number" id="cantidad-ps5" name="cantidad-ps5" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="producto-card">
-                        <img src="../images/led-rgb.jpg" alt="Kit de Luces LED RGB" width="200">
-                        <div class="producto-info">
-                            <h4>Kit de Luces LED RGB para Setup</h4>
-                            <p>Tira de luces con control remoto para ambientar el escritorio.</p>
-                            <div class="precio">$24.990</div>
-                            <div class="disponibilidad">En stock: 30 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-rgb">Cantidad:</label>
-                                <input type="number" id="cantidad-rgb" name="cantidad-rgb" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="producto-card">
-                        <img src="../images/soporte-monitor.jpg" alt="Soporte Monitor" width="200">
-                        <div class="producto-info">
-                            <h4>Soporte para Monitor</h4>
-                            <p>Soporte ajustable para monitor con brazo articulado</p>
-                            <div class="precio">$35.990</div>
-                            <div class="disponibilidad">En stock: 8 unidades</div>
-                            <div class="controles-producto">
-                                <label for="cantidad-soporte">Cantidad:</label>
-                                <input type="number" id="cantidad-soporte" name="cantidad-soporte" min="1" max="10" value="1">
-                                <button type="button" class="btn-agregar">Agregar al carrito</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-carrusel btn-next" data-carrusel="accesorios">›</button>
-            </div>
-        </section>
-
-        <!-- Sección Videojuegos -->
-                <section class="videojuegos">
-                    <h2>🎮 Video Juegos</h2>
-
-            <!-- Grid catálogo -->
-                    <div class="videojuegos-grid">
-                    <div class="videojuego-card">
-                        <img src="../images/godofwar.jpg" alt="God of War Ragnarok">
-                        <h3>God of War: Ragnarok</h3>
-                        <p>$59.990</p>
-                    </div>
-
-                    <div class="videojuego-card">
-                        <img src="../img/videogames/spiderman.jpg" alt="Spider-Man 2">
-                        <h3>Spider-Man 2</h3>
-                        <p>$64.990</p>
-                    </div>
-
-                    <div class="videojuego-card">
-                        <img src="../img/videogames/zelda.jpg" alt="Zelda: Tears of the Kingdom">
-                        <h3>Zelda: Tears of the Kingdom</h3>
-                        <p>$69.990</p>
-                    </div>
-
-                    <div class="videojuego-card">
-                        <img src="../img/videogames/blackmyth.jpg" alt="Black Myth Wukong">
-                        <h3>Black Myth: Wukong</h3>
-                        <p>$59.990</p>
-                    </div>
-
-                    <div class="videojuego-card">
-                        <img src="../img/videogames/mk1.jpg" alt="Mortal Kombat 1">
-                        <h3>Mortal Kombat 1</h3>
-                        <p>$54.990</p>
-                    </div>
-                </div>
-
-                <!-- Ranking -->
-                    <div class="videojuegos-ranking">
-                        <h3>🔥 Top Ventas</h3>
-                        <ol>
-                            <li><span class="rank-number">#1</span> God of War: Ragnarok</li>
-                            <li><span class="rank-number">#2</span> Spider-Man 2</li>
-                            <li><span class="rank-number">#3</span> Zelda: Tears of the Kingdom</li>
-                            <li><span class="rank-number">#4</span> Mortal Kombat 1</li>
-                        </ol>
-                    </div>
-            </section>
-
-
-        
-    </main>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 Level Up. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="../js/Productos.js"></script>
-</body>
-</html>
+        <div class="productos-container">
+        <h1>Catálogo de Productos</h1>
+        
+        <div class="filtros-container">
+            <h2>Filtros</h2>
+            <div class="filtros">
+                <button class="filtro-btn" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="perifericos">Periféricos</button>
+                <button class="filtro-btn" data-categoria="accesorios">Accesorios</button>
+                <button class="filtro-btn" data-categoria="juegos">Videojuegos</button>
+                <button class="filtro-btn" data-categoria="computadores">Computadores</button>
+                <button class="filtro-btn" data-categoria="sillas">Sillas</button>
+                <button class="filtro-btn" data-categoria="servicios">Servicios</button>
+            </div>
+        </div>
+        
+        <div class="productos-agrupados">
+            <h2>Periféricos</h2>
+            <div class="productos-grid">
+                <div class="producto-card" data-categoria="perifericos">
+                    <img src="../images/audifonos-con-microfono-gamer.jpg" alt="Audífonos Gamer">
+                    <div class="producto-info">
+                        <h3>Audífonos Gamer Elite</h3>
+                        <p>Sonido envolvente 7.1 y micrófono de alta fidelidad.</p>
+                        <span>$75.000</span>
+                    </div>
+                    <div class="producto-actions">
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="producto-card" data-categoria="perifericos">
+                    <img src="../images/raton.png" alt="Mouse Gamer">
+                    <div class="producto-info">
+                        <h3>Mouse Gamer RGB</h3>
+                        <p>Diseño ergonómico y luces personalizables.</p>
+                        <span>$35.000</span>
+                    </div>
+                    <div class="producto-actions">
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="producto-card" data-categoria="perifericos">
+                    <img src="../images/teclado.jpg" alt="Teclado Mecánico">
+                    <div class="producto-info">
+                        <h3>Teclado Mecánico Pro</h3>
+                        <p>Interruptores táctiles para una respuesta rápida.</p>
+                        <span>$89.990</span>
+                    </div>
+                    <div class="producto-actions">
+                        <button>Agregar</button>
+                    </div>
+                </div>
+                <div class="producto-card" data-categoria="perifericos">
+                    <img src="../images/monitor gamer 27.jpg" alt="Monitor Gamer">
+                    <div class="producto-info">
+                        <h3>Monitor Gamer 27''</h3>
+                        <p>144hz para una experiencia fluida.</p>
+                        <span>$250.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+          </div>
+        
+        <h2>Accesorios</h2>
+        <div class="productos-grid">
+            <div class="producto-card" data-categoria="accesorios">
+                <img src="../images/audifonos.jpg" alt="Audífonos">
+                <div class="producto-info">
+                    <h3>Audífonos Clásicos</h3>
+                    <p>Para un sonido claro y de calidad.</p>
+                    <span>$25.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="accesorios">
+                <img src="../images/mousepad.jpg" alt="Mousepad">
+                <div class="producto-info">
+                    <h3>Mousepad XL</h3>
+                    <p>Precisión y velocidad para tus movimientos.</p>
+                    <span>$15.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="accesorios">
+                <img src="../images/soporte-monitor.jpg" alt="Soporte Monitor">
+                <div class="producto-info">
+                    <h3>Soporte Monitor Doble</h3>
+                    <p>Optimiza tu espacio de juego.</p>
+                    <span>$45.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+          </div>
+        
+        <h2>Videojuegos</h2>
+        <div class="productos-grid">
+            <div class="producto-card" data-categoria="juegos">
+                <img src="../images/godofwar.jpg" alt="Juego God of War">
+                <div class="producto-info">
+                    <h3>God of War Ragnarök</h3>
+                    <p>Aventura épica de Kratos y Atreus.</p>
+                    <span>$59.990</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="juegos">
+                <img src="../images/juego aventura.jpg" alt="Juego de Aventura">
+                <div class="producto-info">
+                    <h3>Aventura Cósmica</h3>
+                    <p>Explora galaxias y mundos desconocidos.</p>
+                    <span>$45.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="juegos">
+                <img src="../images/juego primera persona.jpg" alt="Juego de Primera Persona">
+                <div class="producto-info">
+                    <h3>Operación Vanguard</h3>
+                    <p>Intenso shooter en primera persona.</p>
+                    <span>$39.990</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="juegos">
+                <img src="../images/juego rpg.jpg" alt="Juego RPG">
+                <div class="producto-info">
+                    <h3>Fantasía Épica RPG</h3>
+                    <p>Crea tu héroe y salva el reino.</p>
+                    <span>$55.990</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+          </div>
+        
+        <h2>Otros</h2>
+        <div class="productos-grid">
+            <div class="producto-card" data-categoria="sillas">
+                <img src="../images/silla ergonomica.jpg" alt="Silla Ergonómica Gamer">
+                <div class="producto-info">
+                    <h3>Silla Ergonómica Pro</h3>
+                    <p>Diseño premium para largas sesiones.</p>
+                    <span>$180.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="computadores">
+                <img src="../images/computadorpro.jpg" alt="Computador Pro">
+                <div class="producto-info">
+                    <h3>Computador Pro Gamer</h3>
+                    <p>Potente y ligera, ideal para trabajo y estudio.</p>
+                    <span>$750.000</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Agregar</button>
+                </div>
+            </div>
+            <div class="producto-card" data-categoria="servicios">
+                <img src="../images/camara.png" alt="Servicio Técnico">
+                <div class="producto-info">
+                    <h3>Servicio Técnico</h3>
+                    <p>Reparación y mantención de equipos.</p>
+                    <span>Precio a cotizar</span>
+                </div>
+                <div class="producto-actions">
+                    <button>Contactar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
