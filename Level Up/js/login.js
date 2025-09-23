@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Asegurar que la cuenta admin exista en localStorage
+  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  if (!usuarios.some(u => u.correo === "admin@levelup.cl")) {
+    usuarios.push({
+      nombre: "Administrador",
+      correo: "admin@levelup.cl",
+      contrasena: "Admin123!", // puedes cambiarla
+      rol: "admin"
+    });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  }
+
   document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // evita que se recargue la página
 
@@ -23,7 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     if (usuarioEncontrado) {
-      mensaje.textContent = "✅ Login exitoso. Bienvenido " + usuarioEncontrado.nombre;
+      if (usuarioEncontrado.rol === "admin") {
+        mensaje.textContent = "👑 Login exitoso. Bienvenido Administrador";
+      } else {
+        mensaje.textContent = "✅ Login exitoso. Bienvenido " + usuarioEncontrado.nombre;
+      }
       mensaje.style.color = "green";
 
       // Guardar sesión (opcional)
