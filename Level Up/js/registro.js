@@ -5,7 +5,27 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
   const correo = document.getElementById("correo").value.trim();
   const contrasena = document.getElementById("contrasena").value.trim();
   const confirmar = document.getElementById("confirmar").value.trim();
+  const nacimiento = document.getElementById("nacimiento").value; // campo fecha
   const mensaje = document.getElementById("mensaje");
+
+  // Calcular edad
+  let edadOk = false;
+  if (nacimiento) {
+    const fechaNacimiento = new Date(nacimiento);
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+    const mes = hoy.getMonth() - fechaNacimiento.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+      edad--; // ajustar si no ha cumplido años todavía
+    }
+    edadOk = edad >= 18;
+  }
+
+  if (!edadOk) {
+    mensaje.textContent = "❌ Debes ser mayor de 18 años para registrarte.";
+    mensaje.style.color = "red";
+    return;
+  }
 
   // Validar que las contraseñas coincidan
   if (contrasena !== confirmar) {
@@ -13,13 +33,14 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     mensaje.style.color = "red";
     return;
   }
+
   // Validar que la contraseña sea segura
   const regexSegura = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&._-])[A-Za-z\d@$!%*#?&._-]{8,}$/;
   if (!regexSegura.test(contrasena)) {
     mensaje.textContent = "❌ La contraseña debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un símbolo.";
     mensaje.style.color = "red";
     return;
-}
+  }
 
   // Validación de correo simple
   const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,14 +50,15 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
     return;
   }
 
-  // Recuperar usuarios existentes del localStorage (si no hay, queda array vacío)
+  // localstorage
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
   // Crear objeto con la información
   const nuevoUsuario = {
     nombre: nombre,
     correo: correo,
-    contrasena: contrasena
+    contrasena: contrasena,
+    nacimiento: nacimiento
   };
 
   // Agregar el nuevo usuario al array
@@ -49,6 +71,6 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
   mensaje.textContent = "✅ Registro exitoso para " + nombre + " con correo " + correo;
   mensaje.style.color = "green";
 
-  // Opcional: limpiar formulario
+  // limpiar formulario
   document.getElementById("registerForm").reset();
 });

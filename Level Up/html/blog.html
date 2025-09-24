@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+  <style>
+    .navbar,
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      font-family: 'Orbitron', sans-serif !important;
+      color: #00f7ff !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #ffffff !important;
+      text-shadow: 0 0 10px #00f;
+    }
+
+    /* Carrusel adaptable a móviles */
+    @media (max-width: 768px) {
+      .carousel, .carousel-inner, .carousel-item { height: 250px; }
+    }
+    @media (max-width: 480px) {
+      .carousel, .carousel-inner, .carousel-item { height: 180px; }
+    }
+  </style>
 <head>
   <meta charset="UTF-8">
   <title>Noticias Gamer - Level Up</title>
