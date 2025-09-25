@@ -1,52 +1,150 @@
+// ================== DATOS ==================
+
+// Noticias
 const noticias = [
   {
     titulo: "“Es un balde de agua fría”: el estudio mexicano BeWolf cree que el impuesto para los videojuegos violentos condenará a la escena indie",
-    contenido: "Fundador de la compañía piensa que la nueva tarifa frenará el crecimiento de la industria en México.El gobierno de México quiere imponer un impuesto de 8% a los videojuegos violentos. Los jugadores ya protestaron para intentar frenar esta iniciativa del Paquete Económico 2026, pues tienen claro que no hay relación directa entre los videojuegos y los índices de violencia que azotan al país. Los desarrolladores mexicanos también ya se pronunciaron al respecto."+
-    "Entre ellos está Néstor Guadalupe García, fundador de BeWolf Studio. La compañía indie es responsable de Redd’s Runaway. Es un run and gun inspirado en el cuento Caperucita Roja, con entornos y enemigos basados en el Día de Muertos y Halloween. García considera que el impuesto a los videojuegos violentos del gobierno de Claudia Sheinbaum “es un balde de agua fría”. Considera que condenará a la escena independiente y que frenará el crecimiento de la industria en México."
-    
-     },
-  {
-    titulo: "GameHers: Chile logra tercer lugar en revolucionario torneo gamer femenino de Valorant en Latinoamérica",
-    contenido: "Chile, agosto de 2025.- Un torneo del videojuego Valorant que contó con la participación de solo mujeres es la iniciativa pionera que impulsa Kotex®, en alianza con INFINITY Esports a través de GameHers, para posicionar al gaming femenino en Chile y Latinoamérica. Esta instancia tuvo su definición regional este 17 de agosto en Lima (Perú), con las representantes nacionales del equipo SkibidiTeam, logrando el tercer lugar del torneo."
-    +"La competencia tuvo una primera fase clasificatoria en Latinoamérica durante las últimas cuatro semanas en distintos países de la región. En Chile, participaron diversos equipos femeninos y tras superar las llaves clasificatorias se alzaron como ganadoras las integrantes de SkibidiTeam, que representó de gran manera al país en tierras peruanas." 
-    +"La participación femenina en el mundo gamer es un desafío que busca relevar Kotex® a través de la iniciativa GameHers, que surge como respuesta a un entorno donde 8 de cada 10 mujeres en Latinoamérica ha enfrentado acoso o discriminación al jugar, y donde muchas aún ocultan su identidad por temor a ser juzgadas, según un estudio de Etermax. Así lo respalda también el estudio Mujeres en VG 2025, que muestra que un 25,8% de las mujeres en Chile afirma haber enfrentado dificultades para acceder a oportunidades laborales o ha recibido salarios más bajos que sus pares hombres, mientras que el 63,4% indica que ha vivido discriminación o malos tratos dentro del ecosistema gamer."
-    +" Patricia Hoyos, directora de Marketing de Kotex® y Plenitud® para Latinoamérica, plantea: “Nuestro propósito es empoderar a las mujeres en todos los ámbitos de su vida, promoviendo su progreso y confianza para alcanzar las metas. El gaming es un reflejo de ese camino: un espacio donde ellas están ganando terreno y demostrando su talento. Este torneo busca romper con los estereotipos. Queremos visibilizar su esfuerzo y crear una comunidad donde se sientan apoyadas, valoradas e inspiradas a seguir creciendo”."
-    +" Durante las semifinales del sábado 16 de agosto, se realizó la campaña #NoTeMutees, iniciativa que buscó visibilizar y generar conciencia sobre el acoso digital que enfrentan muchas jugadoras, proyectando un video con ejemplos de comentarios hostiles frecuentes en el entorno gamer, que reflejan cómo esta realidad lleva a dos de cada tres mujeres a ocultar su identidad o a preferir el silencio durante el juego."
-    +"El domingo 17, en tanto, se desarrolló la gran final que tuvo como protagonistas a los equipos Mascoticas (Costa Rica), PRX (Perú), SkibidiTeam (Chile), Lemon Team (Argentina) y Spike Girls (Colombia). Enfrentamiento de alto nivel y que se definió en favor de Lemon Team, quienes obtuvieron el título regional y un premio adicional de USD 5.000."
-    +"Más que una competencia, Kotex® GameHers busca consolidarse como una plataforma regional que impulsa un cambio cultural en el gaming, promoviendo comunidades seguras, inclusivas y colaborativas, asumiendo el compromiso de acompañar a las mujeres en todos los espacios donde se expresan y se anuncia que esta es sólo la primera de muchas iniciativas para derribar prejuicios y abrir camino para las próximas generaciones.",    
+    contenido: "Fundador de la compañía piensa que la nueva tarifa frenará el crecimiento de la industria en México. ...",
+    imagen: "https://tse2.mm.bing.net/th/id/OIP.9z4pUeSdndLyJ4XwSy8SIwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
-    titulo: "Se realizará la primera gran cumbre de la industria del gaming en Chile ",
-    contenido: " Por primera vez se llevará a cabo en Chile, Epic Win, instancia que propone reunir a los principales actores del ecosistema de la industria de los videojuegos, tanto a nivel local como internacional. El evento se realizará entre el 27 y el 29 de agosto en Movistar GameClub."+
-    "En el marco de una iniciativa público-privada apoyada por CORFO, nace Epic Win 2025, la primera edición de un evento que busca consolidarse como la gran cumbre del gaming. Su objetivo es fomentar el desarrollo de la industria de los videojuegos y fortalecer los lazos entre sus principales actores. Este inédito encuentro internacional reunirá a destacados representantes del sector, tanto a nivel global como local."+
-    "Desde la organización señalan que el foco de Epic Win es construir puentes entre los principales protagonistas del ecosistema gamer, generar redes de negocios y abrir nuevas oportunidades de alianzas. "+
-    "El lugar del evento también tiene un rol importante, ya que se realizará en Movistar GameClub, la cadena de clubes más importante para el desarrollo del ecosistema gamer y tecnológico en Chile. Un punto de encuentro para toda la comunidad gamer, donde además de jugar, pueden participar en eventos como éste, que fortalecen más el posicionamiento del gaming en la industria local."+
-    "“Epic Win es un espacio de encuentro del mundo gaming, segmento que ha ido abriendo camino lleno de oportunidades en los mercados nacionales e internacionales. En el marco del compromiso de Corfo con el fortalecimiento del ecosistema de las industrias creativas y digitales, es que surge esta iniciativa, en donde la industria, emprendedores, desarrolladores, academia y actores vinculados al mercado, se dan cita entorno al talento creativo, donde se compartirán aprendizajes, buenas prácticas, experiencias, nuevas oportunidades y desafíos, en donde la innovación y la colaboración son elementos clave”, señala Gloria Moya, Directora Regional de CORFO, Metropolitano."
-    
+    titulo: "GameHers: Chile logra tercer lugar en revolucionario torneo gamer femenino de Valorant en Latinoamérica",
+    contenido: "Chile, agosto de 2025.- Un torneo del videojuego Valorant que contó con la participación de solo mujeres...",
+    imagen: "https://th.bing.com/th/id/OIP.GI5CO0zW5UUNrGjF0r5yaQHaE7?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3"
+  },
+  {
+    titulo: "Se realizará la primera gran cumbre de la industria del gaming en Chile",
+    contenido: "Por primera vez se llevará a cabo en Chile, Epic Win...",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbXZfNiO3U2iDD06NUyN55hy3jO9Pkv1mrLw&s"
   }
 ];
 
-// Renderizar noticias en acordeón
-const accordion = document.getElementById("accordionNoticias");
+// Reseñas
+const reseñas = [
+  {
+    titulo: "Hollow Knight: Silksong - Reseña",
+    genero: "Action RPG",
+    puntuacion: 8.5,
+    contenido: "Hollow Knight: Silksong no solo cumple con las expectativas, las supera con elegancia. Es más grande, más vibrante y más desafiante que su predecesor, sin perder el alma que lo hizo especial. Aunque algunos picos de dificultad y decisiones de control podrían incomodar a algunos jugadores, este título ofrece suficientes herramientas para adaptarse, aprender y conquistar. Team Cherry ha logrado una secuela que no se conforma con repetir fórmulas, Silksong se atreve a volar alto, a explorar nuevas alturas narrativas y mecánicas, y a exigir lo mejor del jugador. Sin duda se coloca entre los favoritos para llevarse el premio al Juego del Año ya que se trata de una obra que redefine lo que puede ser un metroidvania en esta generación.Black Myth: Wukong es una obra maestra visual que lleva la mitología china a nuevas alturas...",
+    imagen: "https://i.3djuegos.com/juegos/16443/hollow_knight_silksong/fotos/ficha/hollow_knight_silksong-4790214.jpg",
+    pros: [
+      "Gráficos y diseño visual excepcionales",
+      "Sistema de combate fluido y satisfactorio",
+      "Rica narrativa basada en mitología china"
+    ],
+    contras: [
+      "Algunos bugs ocasionales al lanzamiento",
+      "Curva de dificultad irregular"
+    ]
+  },
+  {
+    titulo: "Baldur's Gate 3",
+    genero: "RPG / Estrategia por turnos",
+    puntuacion: 9.5,
+    contenido: "Baldur's Gate 3 representa la evolución perfecta de los RPG clásicos...",
+    imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/ba706e54d68d10a0eb6ab7c36cdad9178c58b7fb7bb03d28.png",
+    pros: ["Narrativa excepcional", "Personajes profundos", "Sistema táctico perfeccionado"],
+    contras: ["Puede resultar abrumador", "Requiere mucho tiempo"]
+  },
+  {
+    titulo: "Spider-Man 2",
+    genero: "Action / Aventura",
+    puntuacion: 8.8,
+    contenido: "Marvel's Spider-Man 2 eleva la franquicia a nuevas alturas...",
+    imagen: "https://th.bing.com/th/id/OIP.lTtgfPwR2M0bFU3Dvi49cwHaNK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3",
+    pros: ["Mecánicas de swing perfeccionadas", "Historia emocionante"],
+    contras: ["Misiones repetitivas", "Final apresurado"]
+  }
+];
 
-noticias.forEach((noticia, index) => {
+// ================== FUNCIONES DE RENDER ==================
+
+// Noticias
+function crearElementoNoticia(noticia, index) {
   const item = document.createElement("div");
   item.classList.add("accordion-item");
 
   item.innerHTML = `
-    <h2 class="accordion-header" id="heading${index}">
+    <h2 class="accordion-header" id="headingNoticia${index}">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+              data-bs-target="#collapseNoticia${index}" aria-expanded="false" aria-controls="collapseNoticia${index}">
         ${noticia.titulo}
       </button>
     </h2>
-    <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#accordionNoticias">
+    <div id="collapseNoticia${index}" class="accordion-collapse collapse" aria-labelledby="headingNoticia${index}" data-bs-parent="#accordionNoticias">
       <div class="accordion-body">
+        ${noticia.imagen ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" class="news-image mb-2">` : ''}
         <p>${noticia.contenido}</p>
-        
       </div>
     </div>
   `;
+  return item;
+}
 
-  accordion.appendChild(item);
+function cargarNoticias() {
+  const accordion = document.getElementById("accordionNoticias");
+  if (!accordion) {
+    console.error("No se encontró el contenedor de noticias");
+    return;
+  }
+  accordion.innerHTML = '';
+  noticias.forEach((noticia, index) => accordion.appendChild(crearElementoNoticia(noticia, index)));
+}
+
+// Reseñas
+function crearElementoReseña(reseña, index) {
+  const item = document.createElement("div");
+  item.classList.add("accordion-item");
+
+  const pros = reseña.pros.map(p => `<li>${p}</li>`).join("");
+  const contras = reseña.contras.map(c => `<li>${c}</li>`).join("");
+
+  item.innerHTML = `
+    <h2 class="accordion-header" id="headingReseña${index}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#collapseReseña${index}" aria-expanded="false" aria-controls="collapseReseña${index}">
+        ${reseña.titulo} — ${reseña.genero} (${reseña.puntuacion}/10)
+      </button>
+    </h2>
+    <div id="collapseReseña${index}" class="accordion-collapse collapse" aria-labelledby="headingReseña${index}" data-bs-parent="#accordionReseñas">
+      <div class="accordion-body">
+        ${reseña.imagen ? `<img src="${reseña.imagen}" alt="${reseña.titulo}" class="news-image mb-2">` : ''}
+        <p>${reseña.contenido}</p>
+        <strong>Pros:</strong>
+        <ul>${pros}</ul>
+        <strong>Contras:</strong>
+        <ul>${contras}</ul>
+      </div>
+    </div>
+  `;
+  return item;
+}
+
+function cargarReseñas() {
+  const accordion = document.getElementById("accordionReseñas");
+  if (!accordion) {
+    console.error("No se encontró el contenedor de reseñas");
+    return;
+  }
+  accordion.innerHTML = '';
+  reseñas.forEach((reseña, index) => accordion.appendChild(crearElementoReseña(reseña, index)));
+}
+
+// ================== UTILIDADES ==================
+function manejarErrorImagen(img) {
+  img.onerror = function() {
+    this.src = 'https://via.placeholder.com/400x250/667eea/ffffff?text=Imagen+no+disponible';
+    this.alt = 'Imagen no disponible';
+  };
+}
+
+// ================== EVENTOS ==================
+document.addEventListener('DOMContentLoaded', () => {
+  cargarNoticias();
+  cargarReseñas();
+
+  // Manejo de errores en imágenes
+  setTimeout(() => {
+    document.querySelectorAll('.news-image').forEach(manejarErrorImagen);
+  }, 100);
 });

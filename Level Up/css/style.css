@@ -10,8 +10,6 @@ body {
   background: url("https://i.pinimg.com/1200x/e6/7e/0f/e67e0fd04058c74ae8baf078c67adcfe.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #ddd;
-
-  /* 💡 Quitamos flex del body y añadimos margen interno */
   display: block;
   min-height: 100vh;
   padding: 10px; /* margen interno general */
@@ -60,7 +58,7 @@ body {
 .carousel-inner,
 .carousel-item {
   width: 100%;
-  height: 400px;
+  height: 200px;
 }
 
 .carousel-item img {
@@ -79,7 +77,7 @@ body {
   background-color: #00f7ff;
 }
 
-/* 💡 margen lateral para carrusel en pantallas pequeñas */
+/* margen lateral para carrusel en pantallas pequeñas */
 @media (max-width: 768px) {
   .carousel {
     padding: 0 10px;
@@ -134,42 +132,48 @@ body {
 
 /* ====== Formularios ====== */
 form {
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 0 15px #00f;
+  box-shadow: 0 0 20px #00f;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
-  margin: 50px auto;
-}
-
-input, button {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  width: 100%;
+  margin: 100px auto;
   font-family: 'Orbitron', sans-serif;
+  color: #0ff;
 }
 
 input {
   background-color: #222;
   color: #0ff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+  box-shadow: inset 0 0 5px #000;
 }
 
 button {
   background-color: #00f;
   color: #000;
   font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #009;
+  box-shadow: 0 0 10px #00f;
 }
 
 #mensaje {
@@ -179,23 +183,41 @@ button:hover {
   text-align: center;
 }
 
-/* ====== Responsividad ====== */
+/* Títulos */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ====== Responsividad navbar y formularios ====== */
 @media (max-width: 900px) {
   .main-section {
     width: 90%;
     padding: 30px;
+    margin-bottom: 10px;
   }
 
   .main-section h1 {
     font-size: 2em;
+    margin-bottom: 15px;
   }
 
   .main-section h2 {
     font-size: 1.5em;
+    margin-bottom: 12px;
   }
 
   .main-section p {
     font-size: 1em;
+    margin-bottom: 12px;
   }
 
   .navbar ul {
@@ -218,5 +240,100 @@ button:hover {
   form {
     width: 90%;
     padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  body {
+    padding-bottom: 10px;
+  }
+
+  .container, .wrapper {
+    padding-bottom: 15px;
+  }
+}
+
+/* ====== Barra de filtros horizontal ====== */
+.filter-btns {
+  display: flex;              /* fila */
+  justify-content: center;    /* centrados */
+  align-items: center;
+  flex-wrap: nowrap;          /* evita que bajen de línea en escritorio */
+  gap: 15px;                  /* separación entre botones */
+  margin: 20px auto;
+  background-color: rgba(0,0,0,0.85); /* si querés fondo como barra */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00f;  /* mismo efecto que navbar */
+}
+
+.filter-btns .filter-btn {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  color: #00f7ff;
+  border: 1px solid #00f7ff;
+  background: transparent;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  white-space: nowrap;        /* evita cortes de texto */
+  text-decoration: none;      /* por si usas <a> */
+}
+
+.filter-btns .filter-btn:hover,
+.filter-btns .filter-btn.active {
+  background-color: #00f7ff;
+  color: #000;
+}
+
+/* En pantallas pequeñas permitimos que se acomoden en varias filas */
+@media (max-width: 600px) {
+  .filter-btns {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ====== Tarjetas de productos ====== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #00f7ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: 0.3s;
+  background-color: #111;
+  color: #00f7ff;
+  height: 350px; /* altura uniforme */
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* altura uniforme */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f;
+}
+
+/* Responsive tarjetas */
+@media (max-width: 768px) {
+  .product-card {
+    height: auto;
+  }
+  .product-card img {
+    height: 180px;
   }
 }
