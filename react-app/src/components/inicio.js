@@ -1,53 +1,69 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Carousel } from 'react-bootstrap';
 
 const Inicio = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <div className="bg-primary text-white text-center py-5">
-        <Container>
-          <h1 className="display-4">Bienvenido a LevelUp</h1>
-          <p className="lead">Los mejores productos de gaming y tecnología</p>
-          <Button variant="light" size="lg" href="/productos">Ver Productos</Button>
-        </Container>
-      </div>
+      {/* Carrusel */}
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/imagen1.jpg"
+            alt="Bienvenido a LevelUp"
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
+          />
+          <Carousel.Caption>
+            <h1>Bienvenido a LevelUp</h1>
+            <p>Los mejores productos de gaming y tecnología</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/imagen2.jpg"
+            alt="Segunda imagen"
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="/images/imagen3.jpg"
+            alt="Tercera imagen"
+            style={{ maxHeight: '500px', objectFit: 'cover' }}
+          />
+        </Carousel.Item>
+      </Carousel>
 
-      {/* Featured Products */}
-      <Container className="mt-5">
-        <h2 className="text-center mb-4">Productos Destacados</h2>
-        <Row>
-          <Col md={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300" />
-              <Card.Body>
-                <Card.Title>Producto Destacado 1</Card.Title>
-                <Card.Text>Lo mejor en tecnología gaming</Card.Text>
-                <Button variant="primary">Ver más</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300" />
-              <Card.Body>
-                <Card.Title>Producto Destacado 2</Card.Title>
-                <Card.Text>Equipamiento profesional</Card.Text>
-                <Button variant="primary">Ver más</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4} className="mb-4">
-            <Card>
-              <Card.Img variant="top" src="https://via.placeholder.com/300" />
-              <Card.Body>
-                <Card.Title>Producto Destacado 3</Card.Title>
-                <Card.Text>Accesorios premium</Card.Text>
-                <Button variant="primary">Ver más</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      {/* Sección Inicio y Visión */}
+      <Container className="mt-5 mb-5">
+        <div style={{
+          background: 'rgba(10, 14, 39, 0.8)',
+          border: '2px solid #00ffff',
+          borderRadius: '10px',
+          padding: '30px',
+          marginBottom: '30px',
+          boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)'
+        }}>
+          <h2 style={{ color: '#00ffff', textAlign: 'center', marginBottom: '20px' }}>Inicio</h2>
+          <p style={{ color: '#b8c5d6', fontSize: '1.1rem', textAlign: 'center' }}>
+            Proporcionar productos de alta calidad para gamers en todo Chile.
+          </p>
+        </div>
+
+        <div style={{
+          background: 'rgba(10, 14, 39, 0.8)',
+          border: '2px solid #00ffff',
+          borderRadius: '10px',
+          padding: '30px',
+          boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)'
+        }}>
+          <h2 style={{ color: '#00ffff', textAlign: 'center', marginBottom: '20px' }}>Visión</h2>
+          <p style={{ color: '#b8c5d6', fontSize: '1.1rem', textAlign: 'center' }}>
+            Ser la tienda online líder en productos para gamers en Chile.
+          </p>
+        </div>
       </Container>
     </div>
   );
