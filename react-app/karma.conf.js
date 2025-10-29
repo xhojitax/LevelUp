@@ -2,24 +2,33 @@ module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
+    
     files: [
-      'src/**/*.js',
-      'src/**/*.spec.js'
+      'jasmine-examples/utilidades.js',
+      'jasmine-examples/utilidades.spec.js'
     ],
+    
+    exclude: [],
+    
     preprocessors: {
-      'src/**/*.js': ['coverage']
+      'jasmine-examples/utilidades.js': ['coverage']
     },
-    reporters: ['progress', 'kjhtml', 'coverage'],
+    
+    reporters: ['progress', 'coverage'],
+    
     coverageReporter: {
       type: 'html',
-      dir: 'coverage/'
+      dir: 'coverage-jasmine/'
     },
+    
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
+    autoWatch: false,
+    
+    browsers: ['ChromeHeadless'],
+    
+    singleRun: true,
     concurrency: Infinity
   })
 }
