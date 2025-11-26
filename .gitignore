@@ -1,0 +1,49 @@
+# ========================================
+# BACKEND (Spring Boot + Maven)
+# ========================================
+levelup-backend/target/
+levelup-backend/.mvn/
+levelup-backend/pom.xml.tag
+levelup-backend/pom.xml.releaseBackup
+levelup-backend/pom.xml.versionsBackup
+levelup-backend/pom.xml.next
+levelup-backend/release.properties
+levelup-backend/dependency-reduced-pom.xml
+levelup-backend/buildNumber.properties
+*.log
+
+# ========================================
+# FRONTEND (React + Node)
+# ========================================
+react-app/node_modules/
+react-app/build/
+react-app/.env.local
+react-app/.env.development.local
+react-app/.env.test.local
+react-app/.env.production.local
+react-app/npm-debug.log*
+react-app/yarn-debug.log*
+react-app/yarn-error.log*
+react-app/coverage/
+react-app/coverage-jasmine/
+
+# ========================================
+# IDE
+# ========================================
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.settings/
+.project
+.classpath
+
+# ========================================
+# System Files
+# ========================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

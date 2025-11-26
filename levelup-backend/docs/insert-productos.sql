@@ -1,0 +1,17 @@
+INSERT INTO productos (nombre, descripcion, precio, stock, imagen, categoria, plataforma, clasificacion, desarrollador, genero, es_nuevo, disponible) VALUES
+('The Legend of Zelda: Tears of the Kingdom', 'Aventura épica en Hyrule', 59990, 25, '/images/zelda-totk.jpg', 'Juegos', 'Nintendo Switch', 'E10+', 'Nintendo', 'Aventura', true, true),
+('God of War Ragnarök', 'Acción y mitología nórdica', 69990, 20, '/images/godofwar.jpg', 'Juegos', 'PS5', 'M', 'Santa Monica Studio', 'Acción', true, true),
+('Elden Ring', 'RPG de mundo abierto', 54990, 30, '/images/elden-ring.jpg', 'Juegos', 'Multi', 'M', 'FromSoftware', 'RPG', true, true),
+('FIFA 24', 'Simulación deportiva', 54990, 40, '/images/juego deporte.jpg', 'Juegos', 'Multi', 'E', 'EA Sports', 'Deportes', true, true),
+('Juego Aventura', 'Aventura épica', 49990, 30, '/images/juego aventura.jpg', 'Juegos', 'Multi', 'T', 'Ubisoft', 'Aventura', true, true),
+('Juego Primera Persona', 'Acción FPS', 59990, 35, '/images/juego primera persona.jpg', 'Juegos', 'Multi', 'M', 'Activision', 'Shooter', true, true),
+('PlayStation 5 Slim', 'Consola de nueva generación', 549990, 10, '/images/ps5-slim.jpg', 'Consolas', 'PS5', 'E', 'Sony', NULL, true, true),
+('Xbox Series X', 'Potencia 4K gaming', 499990, 12, '/images/xbox-series-x.jpg', 'Consolas', 'Xbox', 'E', 'Microsoft', NULL, true, true),
+('Nintendo Switch OLED', 'Portátil y dock', 349990, 18, '/images/switch-oled.jpg', 'Consolas', 'Switch', 'E', 'Nintendo', NULL, true, true),
+('Teclado Mecánico Gaming', 'Switches mecánicos de alta precisión', 79990, 35, '/images/teclado.jpg', 'Accesorios', 'Multi', 'E', 'Logitech', NULL, true, true),
+('Audífonos Gamer con Micrófono', 'Audio premium para tu experiencia gaming', 45990, 45, '/images/audifonos-con-microfono-gamer.jpg', 'Accesorios', 'Multi', 'E', 'HyperX', NULL, true, true),
+('Mouse Gaming RGB', 'Sensor óptico de alta precisión', 29990, 50, '/images/raton.png', 'Accesorios', 'Multi', 'E', 'Razer', NULL, true, true),
+('Monitor Gamer 27"', '144Hz, 1ms, Full HD', 299990, 15, '/images/monitor gamer 27.jpg', 'Accesorios', 'Multi', 'E', 'ASUS', NULL, true, true),
+('Silla Ergonómica Gaming', 'Comodidad durante largas sesiones', 189990, 20, '/images/silla ergonomica.jpg', 'Accesorios', 'Multi', 'E', 'DXRacer', NULL, true, true),
+('Mousepad XL', 'Superficie de tela premium', 15990, 60, '/images/mousepad.jpg', 'Accesorios', 'Multi', 'E', 'SteelSeries', NULL, true, true),
+('Cámara Web HD', '1080p, 60fps', 45990, 40, '/images/camara.png', 'Accesorios', 'Multi', 'E', 'Logitech', NULL, true, true);
