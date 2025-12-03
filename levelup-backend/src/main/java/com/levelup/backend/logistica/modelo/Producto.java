@@ -62,9 +62,11 @@ public class Producto {
     
     @Column(length = 100)
     private String genero; // Acción, RPG, Aventura, Deportes, Shooter, etc.
-    
+
+    @Column(name = "es_nuevo")
     private Boolean esNuevo; // Juego nuevo o usado
     
+    @Column(name = "disponible")
     private Boolean disponible; // Disponibilidad inmediata
     
     @Column(name = "creado_en")
