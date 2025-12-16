@@ -1,12 +1,23 @@
-import { useState } from "react";
-import { userContext } from "./userContext";
+import { UserProvider } from "./context/userContext";
+import { CarritoProvider } from "./context/carritoContext";
 
-export const UserProvider = ({ children }) => {
-  const [usuario, setUsuario] = useState(null);
+function App() {
+  const [currentPage, setCurrentPage] = useState("inicio");
+
+  const renderPage = () => {
+  
+  };
 
   return (
-    <userContext.Provider value={{ usuario, setUsuario }}>
-      {children}
-    </userContext.Provider>
+    <UserProvider>
+      <CarritoProvider>
+        <div className="App">
+          <Navigation setPage={setCurrentPage} />
+          {renderPage()}
+        </div>
+      </CarritoProvider>
+    </UserProvider>
   );
-};
+}
+
+export default App;

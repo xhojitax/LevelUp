@@ -1,7 +1,6 @@
 package com.levelup.backend.Usuario.Controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,16 +19,11 @@ import com.levelup.backend.Usuario.Service.UsuarioService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-
 
 @RestController
 @RequestMapping("/usuario")
-@Tag(name = "Usuarios", description = "Operaciones relacionadas con la gestión de usuarios del sistema.")
+@Tag(name = "Usuarios", description = "Operaciones CRUD de usuarios (solo admin)")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
@@ -39,78 +33,56 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @Operation(summary = "Obtener todos los usuarios", description = "Retorna una lista de todos los usuarios registrados en el sistema.")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Lista de usuarios obtenida exitosamente.",
-                     content = @Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = Usuario.class)))
-    })
-    @GetMapping
-    public ResponseEntity<List<Usuario>> getAllUsuarios() {
-        List<Usuario> usuarios = usuarioService.getAllUsuarios();
-        return new ResponseEntity<>(usuarios, HttpStatus.OK);
-    }
+    // ELIMINADO: método login (está en AuthController)
 
-    @Operation(summary = "Obtener un usuario por ID", description = "Busca y retorna un usuario específico usando su ID.")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Usuario encontrado exitosamente.",
-                     content = @Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = Usuario.class))),
-        @ApiResponse(responseCode = "404", description = "Usuario no encontrado.")
-    })
-    @GetMapping("/{id}")
-    public ResponseEntity<Usuario> getUsuarioById(
-            @Parameter(description = "ID del usuario a buscar.", required = true) @PathVariable Long id) {
-        Optional<Usuario> usuario = usuarioService.getUsuarioById(id);
-        return usuario.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-
-    @Operation(summary = "Crear un nuevo usuario", description = "Permite registrar un nuevo usuario en el sistema.")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "201", description = "Usuario creado exitosamente.",
-                     content = @Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = Usuario.class))),
-        @ApiResponse(responseCode = "400", description = "Solicitud de creación de usuario inválida.")
-    })
-    @PostMapping
-    public ResponseEntity<Usuario> crearUsuario(
-            @RequestBody Usuario usuario) {
-        Usuario nuevoUsuario = usuarioService.guardarUsuario(usuario);
-        return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
-    }
-
-    @Operation(summary = "Actualizar un usuario existente", description = "Actualiza los datos de un usuario existente usando su ID.")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Usuario actualizado exitosamente.",
-                     content = @Content(mediaType = "application/json",
-                                        schema = @Schema(implementation = Usuario.class))),
-        @ApiResponse(responseCode = "404", description = "Usuario no encontrado."),
-        @ApiResponse(responseCode = "400", description = "Solicitud de actualización de usuario inválida.")
-    })
-    @PutMapping("/{id}")
-    public ResponseEntity<Usuario> actualizarUsuario(
-            @Parameter(description = "ID del usuario a actualizar.", required = true) @PathVariable Long id,
-            @RequestBody Usuario usuarioActualizado) {
-        Optional<Usuario> usuarioExistente = usuarioService.getUsuarioById(id);
-        if (usuarioExistente.isPresent()) {
-            usuarioActualizado.setId(id); // Asegurar que el ID sea el correcto
-            Usuario usuarioGuardado = usuarioService.guardarUsuario(usuarioActualizado);
-            return new ResponseEntity<>(usuarioGuardado, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    // ------------------- CREAR USUARIO -------------------
+    @Operation(summary = "Crear un nuevo usuario")
+    @PostMapping("/crear")
+    public ResponseEntity<?> crearUsuario(@RequestBody Usuario usuario) {
+        try {
+            Usuario nuevoUsuario = usuarioService.crearUsuario(usuario);
+            return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
+        } catch (RuntimeException ex) {
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 
-    @Operation(summary = "Eliminar un usuario", description = "Elimina un usuario del sistema usando su ID.")
-    @ApiResponses(value = {
-        @ApiResponse(responseCode = "204", description = "Usuario eliminado exitosamente (No Content)."),
-        @ApiResponse(responseCode = "404", description = "Usuario no encontrado.")
-    })
+    // ------------------- CRUD -------------------
+
+    @Operation(summary = "Obtener todos los usuarios")
+    @GetMapping
+    public ResponseEntity<List<Usuario>> getAllUsuarios() {
+        return new ResponseEntity<>(usuarioService.getAllUsuarios(), HttpStatus.OK);
+    }
+
+    @Operation(summary = "Obtener usuario por ID")
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> getUsuarioById(
+            @Parameter(description = "ID del usuario") @PathVariable Long id) {
+
+        return usuarioService.getUsuarioById(id)
+                .map(usuario -> new ResponseEntity<>(usuario, HttpStatus.OK))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @Operation(summary = "Actualizar usuario existente")
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizarUsuario(
+            @PathVariable Long id,
+            @RequestBody Usuario usuarioActualizado) {
+
+        try {
+            Usuario actualizado = usuarioService.actualizarUsuario(id, usuarioActualizado);
+            return new ResponseEntity<>(actualizado, HttpStatus.OK);
+        } catch (RuntimeException ex) {
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @Operation(summary = "Eliminar usuario")
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarUsuario(
-            @Parameter(description = "ID del usuario a eliminar.", required = true) @PathVariable Long id) {
+    public ResponseEntity<Void> eliminarUsuario(@PathVariable Long id) {
         usuarioService.eliminarUsuario(id);
-        return new ResponseEntity <>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

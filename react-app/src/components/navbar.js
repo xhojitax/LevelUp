@@ -3,16 +3,17 @@ import { Navbar, Nav, Container, Button, Badge } from 'react-bootstrap';
 import { UserContext } from '../context/userContext';
 
 const Navigation = ({ setPage }) => {
-  const { usuario, setUsuario } = useContext(UserContext);
+  const { usuario, logout } = useContext(UserContext); // ← CAMBIO AQUÍ
 
   const cerrarSesion = () => {
     // Limpiar localStorage
     localStorage.removeItem("usuarioLogueado");
     localStorage.removeItem("nombreUsuario");
     localStorage.removeItem("rolUsuario");
+    localStorage.removeItem("token");
 
-    // Actualizar contexto
-    setUsuario(null);
+    // Usar logout del contexto
+    logout(); // ← CAMBIO AQUÍ
 
     // Redirigir al inicio
     setPage('inicio');
